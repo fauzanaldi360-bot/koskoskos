@@ -4,6 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "build:hostinger": "vite build && npm run copy:hostinger",
+        "copy:hostinger": "mkdir -p dist && cp -r public/build dist/ && cp public/index.php dist/ && cp .htaccess dist/ 2>/dev/null || echo 'No .htaccess' && echo 'dist folder created'",
         "dev": "vite"
     },
     "devDependencies": {
