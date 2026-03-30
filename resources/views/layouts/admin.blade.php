@@ -90,6 +90,10 @@
                 
                 <div class="pt-8">
                     <div class="text-[10px] font-bold text-gray-600 uppercase tracking-widest px-4 mb-2">Lainnya</div>
+                    <a href="{{ route('admin.settings') }}" class="flex items-center gap-3.5 px-4 py-3 rounded-2xl text-sm font-semibold text-gray-400 hover:bg-gray-800/50 hover:text-white transition-all {{ request()->routeIs('admin.settings') ? 'bg-gray-800/50 text-white' : '' }}">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Pengaturan</span>
+                    </a>
                     <a href="/" class="flex items-center gap-3.5 px-4 py-3 rounded-2xl text-sm font-semibold text-gray-400 hover:bg-gray-800/50 hover:text-white transition-all">
                         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
                         <span>Lihat Situs</span>
@@ -121,7 +125,7 @@
         <!-- Main Content -->
         <main class="flex-1 md:ml-72 flex flex-col h-full bg-[#0a0e14] relative">
             <!-- Header/Top Bar -->
-            <header class="h-20 bg-[#0a0e14]/50 backdrop-blur-xl border-b border-gray-800/30 px-8 flex items-center justify-between sticky top-0 z-30">
+            <header class="h-16 md:h-20 bg-[#0a0e14]/50 backdrop-blur-xl border-b border-gray-800/30 px-4 md:px-8 flex items-center justify-between sticky top-0 z-30">
                 <div class="flex items-center gap-4 flex-1">
                     <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" class="md:hidden p-2.5 bg-gray-800 text-white rounded-xl">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -149,7 +153,7 @@
             </header>
 
             <!-- Page Content -->
-            <div class="flex-1 overflow-y-auto p-8 scrollbar-hide">
+            <div class="flex-1 overflow-y-auto p-4 md:p-8 scrollbar-hide">
                 {{ $slot }}
             </div>
         </main>

@@ -1,86 +1,86 @@
 <div>
-    <div class="mb-10">
-        <h1 class="text-3xl font-extrabold text-white tracking-tight mb-2">Dashboard</h1>
+    <div class="mb-6 md:mb-10">
+        <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-2">Dashboard</h1>
         <p class="text-sm font-medium text-gray-500">Selamat datang kembali! Berikut ringkasan kos Anda.</p>
     </div>
 
     <!-- Stats Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5 mb-10">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-3 md:gap-5 mb-6 md:mb-10">
         <!-- Total Kamar -->
-        <div class="bg-[#111827] rounded-3xl p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
-            <div class="flex items-center justify-between mb-6">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Total Kamar</span>
-                <div class="w-8 h-8 rounded-lg bg-[#0f766e]/10 flex items-center justify-center text-[#0f766e]">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        <div class="bg-[#111827] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
+            <div class="flex items-center justify-between mb-3 md:mb-6">
+                <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">Total Kamar</span>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-[#0f766e]/10 flex items-center justify-center text-[#0f766e]">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                 </div>
             </div>
-            <div class="text-3xl font-extrabold text-white">1</div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">1</div>
         </div>
 
         <!-- Occupancy Rate -->
-        <div class="bg-[#111827] rounded-3xl p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
-            <div class="flex items-center justify-between mb-6">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Occupancy</span>
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <div class="bg-[#111827] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
+            <div class="flex items-center justify-between mb-3 md:mb-6">
+                <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">Occupancy</span>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                 </div>
             </div>
-            <div class="text-3xl font-extrabold text-white">{{ $activeBookings > 0 ? '100' : '0' }}%</div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">{{ $activeBookings > 0 ? '100' : '0' }}%</div>
         </div>
 
         <!-- Total Tagihan (Income Month) -->
-        <div class="bg-[#111827] rounded-3xl p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group lg:col-span-2 xl:col-span-1">
-            <div class="flex items-center justify-between mb-6">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Total Tagihan</span>
-                <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <div class="bg-[#111827] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group lg:col-span-2 xl:col-span-1">
+            <div class="flex items-center justify-between mb-3 md:mb-6">
+                <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">Total Tagihan</span>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                 </div>
             </div>
-            <div class="text-xl font-extrabold text-white truncate">Rp {{ number_format($monthIncome, 0, ',', '.') }}</div>
+            <div class="text-lg md:text-xl font-extrabold text-white truncate">Rp {{ number_format($monthIncome, 0, ',', '.') }}</div>
         </div>
 
         <!-- Sudah Bayar -->
-        <div class="bg-[#111827] rounded-3xl p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group lg:col-span-2 xl:col-span-1">
-            <div class="flex items-center justify-between mb-6">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Sudah Bayar</span>
-                <div class="w-8 h-8 rounded-lg bg-[#0f766e]/10 flex items-center justify-center text-[#0f766e]">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+        <div class="bg-[#111827] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group lg:col-span-2 xl:col-span-1">
+            <div class="flex items-center justify-between mb-3 md:mb-6">
+                <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">Sudah Bayar</span>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-[#0f766e]/10 flex items-center justify-center text-[#0f766e]">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
                 </div>
             </div>
-            <div class="text-xl font-extrabold text-white truncate">Rp {{ number_format($todayIncome, 0, ',', '.') }}</div>
+            <div class="text-lg md:text-xl font-extrabold text-white truncate">Rp {{ number_format($todayIncome, 0, ',', '.') }}</div>
         </div>
 
         <!-- Overdue -->
-        <div class="bg-[#111827] rounded-3xl p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
-            <div class="flex items-center justify-between mb-6">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Overdue</span>
-                <div class="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <div class="bg-[#111827] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
+            <div class="flex items-center justify-between mb-3 md:mb-6">
+                <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">Overdue</span>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                 </div>
             </div>
-            <div class="text-3xl font-extrabold text-white">0</div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">0</div>
         </div>
 
         <!-- Pengeluran Aktif -->
-        <div class="bg-[#111827] rounded-3xl p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
-            <div class="flex items-center justify-between mb-6">
-                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Expense</span>
-                <div class="w-8 h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        <div class="bg-[#111827] rounded-2xl md:rounded-3xl p-4 md:p-6 border border-gray-800/50 hover:border-[#0f766e]/30 transition-all group">
+            <div class="flex items-center justify-between mb-3 md:mb-6">
+                <span class="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">Expense</span>
+                <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500">
+                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
                 </div>
             </div>
-            <div class="text-3xl font-extrabold text-white">0</div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">0</div>
         </div>
     </div>
 
     <!-- Reminder Section -->
-    <div class="bg-[#111827] rounded-[2.5rem] p-8 border border-gray-800/50 mb-10 overflow-hidden relative">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-[#0f766e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div class="flex items-center gap-3 mb-8 relative z-10">
-            <div class="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+    <div class="bg-[#111827] rounded-2xl md:rounded-[2.5rem] p-4 md:p-8 border border-gray-800/50 mb-6 md:mb-10 overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-[#0f766e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="flex items-center gap-2 md:gap-3 mb-4 md:mb-8 relative z-10">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
             </div>
-            <h3 class="text-lg font-bold text-white tracking-tight">Reminder Pembayaran</h3>
+            <h3 class="text-base md:text-lg font-bold text-white tracking-tight">Reminder Pembayaran</h3>
             <span class="px-2.5 py-0.5 bg-amber-500/20 text-amber-500 text-[10px] font-bold rounded-full border border-amber-500/20">{{ count($recentBookings) }}</span>
         </div>
 
@@ -106,12 +106,12 @@
     </div>
 
     <!-- Bottom Charts Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
         <!-- Cashflow Bar Chart -->
-        <div class="lg:col-span-2 bg-[#111827] rounded-[2.5rem] p-8 border border-gray-800/50">
-            <h3 class="text-lg font-bold text-white tracking-tight mb-8">Cashflow 6 Bulan Terakhir</h3>
+        <div class="lg:col-span-2 bg-[#111827] rounded-2xl md:rounded-[2.5rem] p-4 md:p-8 border border-gray-800/50">
+            <h3 class="text-base md:text-lg font-bold text-white tracking-tight mb-4 md:mb-8">Cashflow 6 Bulan Terakhir</h3>
             
-            <div class="flex items-end justify-between h-48 gap-4 px-2">
+            <div class="flex items-end justify-between h-32 md:h-48 gap-2 md:gap-4 px-1 md:px-2">
                 @php
                     $months = ['Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Feb'];
                     $incomes = [18, 19, 21, 23, 26, 25]; // in millions
@@ -142,8 +142,8 @@
         </div>
 
         <!-- Occupancy Progress Bars -->
-        <div class="bg-[#111827] rounded-[2.5rem] p-8 border border-gray-800/50">
-            <h3 class="text-lg font-bold text-white tracking-tight mb-8">Occupancy per Properti</h3>
+        <div class="bg-[#111827] rounded-2xl md:rounded-[2.5rem] p-4 md:p-8 border border-gray-800/50">
+            <h3 class="text-base md:text-lg font-bold text-white tracking-tight mb-4 md:mb-8">Occupancy per Properti</h3>
             
             <div class="space-y-8">
                 <div>

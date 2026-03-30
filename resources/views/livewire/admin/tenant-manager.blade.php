@@ -1,15 +1,16 @@
 <div class="space-y-6">
     <!-- Header Section -->
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-            <h1 class="text-2xl font-bold text-white">Penyewa</h1>
+            <h1 class="text-xl md:text-2xl font-bold text-white">Penyewa</h1>
             <p class="text-gray-400 text-sm mt-1">{{ $activeTenants->count() }} penyewa aktif + {{ $completedTenants->count() }} selesai</p>
         </div>
-        <button wire:click="openModal" class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold rounded-xl transition-colors">
+        <button wire:click="openModal" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#0d9488] hover:bg-[#0f766e] text-white text-sm font-semibold rounded-xl transition-colors w-full sm:w-auto">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
             </svg>
-            Tambah Penyewa
+            <span class="hidden sm:inline">Tambah Penyewa</span>
+            <span class="sm:hidden">Tambah</span>
         </button>
     </div>
 
@@ -21,7 +22,7 @@
     @endif
 
     <!-- Search -->
-    <div class="max-w-md">
+    <div class="w-full sm:max-w-md">
         <div class="relative">
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
